@@ -1,0 +1,221 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background: #1C1C1C;
+    color: #ffffff;
+}
+
+#title {
+    text-align: center;
+    font-size: 40px;
+}
+
+main {
+    width: 550px;
+    margin: 0 auto;
+    background: #1F2937;
+    padding: 50px 52px;
+}
+
+/* ----------- Main Section  ------------ */
+.main-subtitle {
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+
+.change-text-color {
+    color: #4ADF86;
+}
+
+.main-content p {
+    margin: 0px 0px 51px;
+    color: #D5D4D8;
+}
+
+/* ----------- Main Section  End------------ */
+
+/* ----------- Password  Section ------------ */
+#generate-password-btn {
+    padding: 9px 16px;
+    background: #10B981;
+    margin-bottom: 25px;
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+}
+
+#generate-password-btn:active {
+    box-shadow: 0 0 2px #4ADF86;
+}
+
+
+.line {
+    border: 1px solid #2F3E53;
+    margin-bottom: 20px;
+}
+
+#password-container {
+    display: flex;
+}
+
+.password-field {
+    width: 365px;
+    margin: 35px 18px 0 0;
+    padding: 9px;
+    background: #273549;
+    border: 1px solid #10B981;
+    /* border-right: none; */
+    border-radius: 6px;
+    /* outline: none; */
+    color: #55F991;
+    text-align: center;
+    
+}
+
+.config {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+}
+
+.config-password-length-container { 
+    display: flex;
+    flex-direction: column;
+}
+
+/* ----------- Toggles Buttons ----------- */
+.font-accent {
+    color: #1F2937;
+    font-weight: bold;
+    
+}
+
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 133px;
+    height: 34px;
+   
+}
+
+
+.toggle input {
+   opacity: 0;
+   width: 0;
+   height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 18px;
+    
+    
+}
+
+
+.slider::before {
+    content: "";
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 5px;
+    bottom: 4px;
+    border-radius: 50%;
+    background-color: #fff;
+    -webkit-transition: .4s;
+    transition: .4s;
+   
+}
+
+.slider::after {
+    content: "Numbers";
+    position: absolute;
+    left: 35px;
+    transform: translateY(50%);
+}
+
+
+
+
+#slider-symbols::after{
+    content: "Symbols";
+    position: absolute;
+    left:38px;
+}
+
+.toggle input:checked + .slider {
+    background-color: #10B981;
+}
+
+.toggle input:checked + .slider::before {
+    -webkit-transform: translateX(115px);
+    -ms-transform: translate(115px);
+    transform: translateX(98px);
+}
+
+/* ------- Toggle Text -------- */
+
+#password-length {
+   width: 110px;
+}
+
+/* ----------- Clipboard Section  Button ------------ */
+.clipboard-container {
+    position: relative;
+    width: 40px;
+    height: 39px;
+    top: 35px;
+    color: white;
+    border: 1px solid #10B981;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.clipboard-container i {
+    color: #10B981;
+}
+
+.clipboard-container:active {
+    background-color: #aaa;
+}
+
+
+.clipboard-container::before {
+    content: "Copied!";
+    position: absolute;
+    font-size: 14px;
+    bottom: 50px;
+    left: -8px;
+    background-color: #10B981;
+    padding: 3px 6px;
+    border-radius: 6px;
+    z-index: 1;
+    display: none;
+}
+
+.clipboard-container::after {
+    content: "";
+    position: absolute;
+    background-color: #10B981;
+    width: 10px;
+    height: 10px;
+    bottom: 45px;
+    left: 14px;
+    transform: rotate(45deg);
+    display: none;
+}
+
+.clipboard-container.active::before,
+.clipboard-container.active::after {
+    display: block;
+}

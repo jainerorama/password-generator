@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <script src="https://kit.fontawesome.com/9dc65948c3.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+       
+        <header>
+             <h1 id="title">Password Generator</h1>
+       </header> 
+       
+       <!----------------------------->
+        <main>
+           
+                <section class="main-content">
+                    <!--------Main  Text------->
+                    <h2 class="main-subtitle">Generate a <br><span class="change-text-color">random password</span></h2>
+                    <p>Never use an insecure password again.</p>
+                
+                </section>     
+                    
+                <!------Password Section--->
+                <section>
+
+                        <button type="button" id="generate-password-btn" onclick="generatePasswords()">Generate passwords</button>
+                        <hr class="line">
+                        
+                        <!------- Toggles Section ------>
+                        <div class="config">
+                            
+                                <label class="toggle font-accent" >
+                                    <input id="toggle-numbers" type="checkbox" checked>
+                                    <span class="slider" ></span>
+                                </label>
+                            
+                            
+                                <label class="toggle font-accent">
+                                    <input id="toggle-symbols" type="checkbox" checked>
+                                    <span class="slider" id="slider-symbols"></span>
+                                </label>  
+                            
+                                <div class="config-password-length-container">
+                                    <label>Password length</label>
+                                    <input type="range" id="password-length" min="8" max="20" value="15">  
+                                </div>
+                            
+                        </div> 
+                        
+                        <div id="password-container">
+                            
+                            <input class="password-field" id="password-input" type="text">
+                            <!-------- Clipboard Button  -------->
+                            <button  type="button" class="clipboard-container" id="clipboard-btn">
+                                <i class="fa-solid fa-clipboard " ></i>                        
+                            </button>
+        
+                        </div>
+                
+                </section>
+            
+        </main>
+        <script src="js/index.js"></script>
+   
+    </body>
+</html>
